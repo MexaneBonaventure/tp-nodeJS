@@ -1,4 +1,6 @@
-body {
-  background: red;
-  color: white;
+.tasks {
+  display: flex;
+  width: 30vw;
+  justify-content: space-between;
+  border: 1px solid black;
 }

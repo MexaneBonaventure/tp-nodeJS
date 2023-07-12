@@ -1,0 +1,10 @@
+mixin taskBox(name, type, done)
+  .tasks
+    h2= name
+    p= type
+    button Catégoriser
+    if !task.done
+      button Valider
+    else 
+      button Invalider
+    button Supprimer

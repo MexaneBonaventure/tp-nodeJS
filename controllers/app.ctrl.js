@@ -1,15 +1,10 @@
 const { resolve } = require('path');
 
 exports.homeCtrl = (req, res) => {
-  res.sendFile( resolve('public', 'home.html') );
+  res.render('home.pug');
 };
 
 exports.listCtrl = (req, res) => {
-  const list = require('../db.json');
-  const listUsers = list.users;
-  listUsers.forEach(element => console.log(element.name));
-  const listTasks = list.tasks;
-  // Récupération des livres
-  // Vérification de la cnx
-  res.sendFile( resolve('public', 'list.html') );
+  const list = require("../db.json");
+  res.render('list.pug', {tasks: list.tasks, users: list.users});
 };
