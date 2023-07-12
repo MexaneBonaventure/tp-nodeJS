@@ -1,0 +1,38 @@
+{
+    "users": [
+      {
+        "name": "Martin"
+      },
+      {
+        "name": "Elyas"
+      },
+      {
+        "name": "Eric"
+      },
+      {
+        "name": "Tiana"
+      }
+    ],
+    "tasks": [
+        {
+          "name": "Faire la vaisselle",
+          "type": "Tache Ménagère",
+          "user": "Martin"
+        },
+        {
+          "name": "Acheter du pain",
+          "type": "Dépense",
+          "user": "Elyas"
+        },
+        {
+          "name": "Faire le ménage",
+          "type": "Tache Ménagère",
+          "user": "Eric"
+        },
+        {
+          "name": "Remettre de l'essence",
+          "type": "Dépense",
+          "user": "Tiana"
+        }
+      ]
+  }
