@@ -1,0 +1,11 @@
+article(class= task.isUrgent ? 'urgent' : '')
+    h3 #{task.content}
+    form.isDoneForm
+        input.hidden#taskId(type="text", value=`${task.id}`, name="taskId")
+        input.hidden#userId(type="number", value=`${user.id}`, name="userId")
+        button.doneBtn
+            = task.isDone ? 'Ne plus valider' : 'Valider'
+    form.deleteTask
+        input.hidden#taskId(type="text", value=`${task.id}`, name="taskId")
+        button.delete Supprimer
+        

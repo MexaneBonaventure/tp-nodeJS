@@ -1,0 +1,24 @@
+doctype html
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/userTasks.css")
+        title Formulaire de tâche
+    body
+        h1 Créer un formulaire
+        a(href="/home") accueil
+        form#taskForm
+            .task 
+                label(for="task") Tâche
+                input#task(type="text" name="task")
+            .category
+                fieldset 
+                    legend Choisissez la catégorie de votre tâche
+                    label(for="normal") Normal 
+                    input#normal(type="radio" name="category" value="normal", checked)
+                    label(for="urgent") Urgente
+                    input#urgent(type="radio" name="category" value="urgent")
+            input.hidden#userId(type="number", value=userId)
+            button Créer
+            script(src="/js/createTask.js") 

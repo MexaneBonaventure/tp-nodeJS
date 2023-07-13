@@ -1,0 +1,22 @@
+doctype html
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/userTasks.css")
+        title Tâches
+    body 
+        h1 Tâche de #{user.name}
+        a(href=`/user/${user.id}/createTask`) Créer une tâche
+        section.tasks 
+            section.notdone
+                h2 Tâche à faire
+                each task in userTasks
+                    unless task.isDone
+                     include includes/_task
+            section.done
+                h2 Tâche faites
+                each task in userTasks
+                    if task.isDone
+                        include includes/_task
+        script(src="/js/userTasks.js") 
